@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/fragment_layout_padding"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.mat.hamurtamu.EditProfileFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="Edit Akun"
+            android:textAppearance="@android:style/TextAppearance.Holo.Large"
+            android:textColor="@color/white" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/layoutEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_padding"
+            android:layout_margin="@dimen/text_margin"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/textNama"/>
+
+            <EditText
+                android:id="@+id/EditTextNama"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:maxLines="1"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/username"/>
+
+            <EditText
+                android:id="@+id/Editusername"
+                style="@android:style/Widget.Holo.Light.AutoCompleteTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/text_oldPassword"/>
+
+            <EditText
+                android:id="@+id/password_old"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:maxLines="1"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/text_newPassword"/>
+
+            <EditText
+                android:id="@+id/password_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:maxLines="1"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/textTlp"/>
+
+            <EditText
+                android:id="@+id/EditTextTlp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:maxLines="1"
+                android:inputType="textPhonetic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/textEmail"/>
+
+            <EditText
+                android:id="@+id/EditTextEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:ems="10"
+                android:maxLines="1"
+                android:inputType="textEmailAddress" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutButton"
+            android:paddingTop="@dimen/text_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/layoutEdit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+                android:id="@+id/buttonBatal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/text_batal"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/buttonEdit"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/buttonBatal"
+                android:text="@string/text_simpan"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
